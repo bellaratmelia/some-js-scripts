@@ -1,9 +1,10 @@
 
 jQuery(document).ready(function($) {
-    FEED_URL = 'http://stackoverflow.com/feeds/tag?tagnames=wordpress&sort=newest'; 
+    //FEED_URL = 'http://stackoverflow.com/feeds/tag?tagnames=wordpress&sort=newest'; 
 		//feed url 
 	$.ajax({ 
-		url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(FEED_URL), 
+		url: document.location.protocol + '//blogs.ntu.edu.sg/lib-databases/?feed=json',
+		//document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(FEED_URL), 
 		dataType: 'json', 
 		success: function(data) { 
 			if (data.responseData.feed && data.responseData.feed.entries) { 
